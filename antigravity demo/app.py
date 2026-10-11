@@ -87,19 +87,26 @@ st.markdown(
 @st.cache_resource(show_spinner="Loading Vision Transformer model...")
 def load_cached_model():
     """Load and cache the model and processor.
-    
-    Prefers fine-tuned model in outputs/saved_model if available,
-    otherwise loads the pretrained Hugging Face checkpoint.
+
+    Prefers a fine-tuned local checkpoint when available; if that checkpoint is missing
+    a preprocessor config, fall back to the original Hugging Face model checkpoint.
     """
-    if SAVED_MODEL_DIR.exists() and (SAVED_MODEL_DIR / "config.json").exists():
-        model_path = str(SAVED_MODEL_DIR)
+    local_model_path = SAVED_MODEL_DIR if SAVED_MODEL_DIR.exists() and (SAVED_MODEL_DIR / "config.json").exists() else None
+
+    if local_model_path is not None and (local_model_path / "preprocessor_config.json").exists():
+        model_path = str(local_model_path)
         source = "Fine-tuned model (Local outputs)"
+    elif local_model_path is not None:
+        model_path = MODEL_NAME
+        source = f"Fine-tuned weights + pretrained processor ({MODEL_NAME})"
     else:
         model_path = MODEL_NAME
         source = f"Pretrained Hugging Face ({MODEL_NAME})"
 
     processor = AutoImageProcessor.from_pretrained(model_path)
-    model = AutoModelForImageClassification.from_pretrained(model_path)
+    model = AutoModelForImageClassification.from_pretrained(
+        str(local_model_path) if local_model_path is not None and (local_model_path / "config.json").exists() else model_path
+    )
     model.to(DEVICE)
     model.eval()
     return model, processor, source

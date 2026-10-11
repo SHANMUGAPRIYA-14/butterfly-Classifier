@@ -19,19 +19,28 @@ from src.config import (
 
 
 def load_model_and_processor(model_dir: Optional[Union[str, Path]] = None):
-    """Load model and processor from fine-tuned outputs directory if present, else Hugging Face."""
+    """Load model and processor from the best available local or Hugging Face checkpoint."""
+    local_path = None
     if model_dir is not None and Path(model_dir).exists():
-        path = str(model_dir)
-        print(f"[INFERENCE] Loading model from specified path: {path}")
+        local_path = Path(model_dir)
+        print(f"[INFERENCE] Loading model from specified path: {local_path}")
     elif SAVED_MODEL_DIR.exists() and (SAVED_MODEL_DIR / "config.json").exists():
-        path = str(SAVED_MODEL_DIR)
-        print(f"[INFERENCE] Loading fine-tuned model from: {path}")
-    else:
-        path = MODEL_NAME
-        print(f"[INFERENCE] Loading pretrained model from Hugging Face: {path}")
+        local_path = SAVED_MODEL_DIR
+        print(f"[INFERENCE] Loading fine-tuned model from: {local_path}")
 
-    processor = AutoImageProcessor.from_pretrained(path)
-    model = AutoModelForImageClassification.from_pretrained(path)
+    if local_path is not None and (local_path / "preprocessor_config.json").exists():
+        model_path = str(local_path)
+    else:
+        model_path = MODEL_NAME
+        if local_path is not None:
+            print(f"[INFERENCE] Local checkpoint is missing preprocessor_config.json; falling back to {MODEL_NAME}")
+        else:
+            print(f"[INFERENCE] Loading pretrained model from Hugging Face: {MODEL_NAME}")
+
+    processor = AutoImageProcessor.from_pretrained(model_path)
+    model = AutoModelForImageClassification.from_pretrained(
+        str(local_path) if local_path is not None and (local_path / "config.json").exists() else model_path
+    )
     model.to(DEVICE)
     model.eval()
     return model, processor
