@@ -1,0 +1,8 @@
+{
+    "accuracy": 0.9633,
+    "weighted_precision": 0.9557,
+    "weighted_recall": 0.9633,
+    "weighted_f1": 0.9557,
+    "number_of_test_images": 300,
+    "number_of_species": 100
+}

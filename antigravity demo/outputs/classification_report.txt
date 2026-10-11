@@ -1,0 +1,103 @@
+                           precision    recall  f1-score   support
+
+                   ADONIS       1.00      0.67      0.80         3
+AFRICAN GIANT SWALLOWTAIL       1.00      1.00      1.00         2
+           AMERICAN SNOOT       0.00      0.00      0.00         1
+                    AN 88       1.00      1.00      1.00         1
+                  APPOLLO       1.00      1.00      1.00         2
+     ARCIGERA FLOWER MOTH       1.00      1.00      1.00         4
+                    ATALA       1.00      1.00      1.00         2
+               ATLAS MOTH       1.00      1.00      1.00         1
+ BANDED ORANGE HELICONIAN       1.00      1.00      1.00         2
+           BANDED PEACOCK       1.00      1.00      1.00         3
+        BANDED TIGER MOTH       1.00      1.00      1.00         4
+            BECKERS WHITE       0.75      1.00      0.86         3
+  BIRD CHERRY ERMINE MOTH       1.00      1.00      1.00         4
+         BLACK HAIRSTREAK       1.00      1.00      1.00         2
+              BLUE MORPHO       1.00      0.67      0.80         3
+        BLUE SPOTTED CROW       1.00      1.00      1.00         3
+         BROOKES BIRDWING       1.00      1.00      1.00         4
+              BROWN ARGUS       1.00      1.00      1.00         2
+           BROWN SIPROETA       1.00      1.00      1.00         2
+            CABBAGE WHITE       1.00      1.00      1.00         3
+          CAIRNS BIRDWING       1.00      1.00      1.00         3
+          CHALK HILL BLUE       0.67      1.00      0.80         2
+                 CHESTNUT       1.00      1.00      1.00         3
+            CINNABAR MOTH       1.00      1.00      1.00         2
+           CLEARWING MOTH       1.00      1.00      1.00         2
+                CLEOPATRA       1.00      1.00      1.00         4
+       CLODIUS PARNASSIAN       1.00      1.00      1.00         2
+          CLOUDED SULPHUR       1.00      1.00      1.00         3
+               COMET MOTH       1.00      1.00      1.00         5
+        COMMON BANDED AWL       1.00      1.00      1.00         4
+        COMMON WOOD-NYMPH       0.75      1.00      0.86         3
+              COPPER TAIL       1.00      1.00      1.00         2
+                  CRECENT       1.00      0.75      0.86         4
+            CRIMSON PATCH       1.00      1.00      1.00         3
+            DANAID EGGFLY       1.00      1.00      1.00         3
+             EASTERN COMA       0.80      1.00      0.89         4
+     EASTERN DAPPLE WHITE       0.40      1.00      0.57         2
+       EASTERN PINE ELFIN       1.00      1.00      1.00         3
+          ELBOWED PIERROT       1.00      1.00      1.00         3
+         EMPEROR GUM MOTH       1.00      1.00      1.00         5
+       GIANT LEOPARD MOTH       1.00      1.00      1.00         3
+      GLITTERING SAPPHIRE       1.00      1.00      1.00         3
+              GOLD BANDED       1.00      1.00      1.00         1
+             GREAT EGGFLY       1.00      1.00      1.00         4
+                GREAT JAY       1.00      1.00      1.00         5
+ GREEN CELLED CATTLEHEART       1.00      1.00      1.00         4
+         GREEN HAIRSTREAK       1.00      1.00      1.00         4
+          GREY HAIRSTREAK       1.00      1.00      1.00         4
+            HERCULES MOTH       1.00      1.00      1.00         4
+   HUMMING BIRD HAWK MOTH       1.00      1.00      1.00         5
+            INDRA SWALLOW       1.00      1.00      1.00         5
+                  IO MOTH       1.00      1.00      1.00         3
+          Iphiclus sister       1.00      1.00      1.00         2
+             LARGE MARBLE       0.00      0.00      0.00         5
+                LUNA MOTH       1.00      1.00      1.00         3
+   MADAGASCAN SUNSET MOTH       1.00      1.00      1.00         4
+                MALACHITE       1.00      1.00      1.00         3
+         MANGROVE SKIPPER       1.00      1.00      1.00         2
+                   MESTRA       1.00      0.67      0.80         3
+                METALMARK       1.00      1.00      1.00         1
+   MILBERTS TORTOISESHELL       1.00      1.00      1.00         3
+                  MONARCH       1.00      1.00      1.00         3
+           MOURNING CLOAK       1.00      1.00      1.00         2
+       OLEANDER HAWK MOTH       1.00      1.00      1.00         2
+           ORANGE OAKLEAF       1.00      1.00      1.00         3
+               ORANGE TIP       0.80      1.00      0.89         4
+          ORCHARD SWALLOW       1.00      1.00      1.00         3
+             PAINTED LADY       0.83      1.00      0.91         5
+               PAPER KITE       1.00      1.00      1.00         4
+                  PEACOCK       1.00      1.00      1.00         3
+               PINE WHITE       1.00      1.00      1.00         4
+         PIPEVINE SWALLOW       1.00      1.00      1.00         4
+          POLYPHEMUS MOTH       1.00      1.00      1.00         3
+                 POPINJAY       1.00      1.00      1.00         3
+        PURPLE HAIRSTREAK       1.00      1.00      1.00         4
+          PURPLISH COPPER       1.00      1.00      1.00         3
+            QUESTION MARK       1.00      0.67      0.80         3
+              RED ADMIRAL       1.00      1.00      1.00         2
+              RED CRACKER       1.00      1.00      1.00         4
+              RED POSTMAN       1.00      1.00      1.00         4
+       RED SPOTTED PURPLE       1.00      1.00      1.00         4
+          ROSY MAPLE MOTH       1.00      1.00      1.00         1
+           SCARCE SWALLOW       1.00      1.00      1.00         3
+      SILVER SPOT SKIPPER       1.00      1.00      1.00         2
+      SIXSPOT BURNET MOTH       1.00      1.00      1.00         3
+            SLEEPY ORANGE       1.00      1.00      1.00         2
+                SOOTYWING       1.00      1.00      1.00         4
+         SOUTHERN DOGFACE       1.00      1.00      1.00         4
+           STRAITED QUEEN       1.00      1.00      1.00         3
+        TROPICAL LEAFWING       0.67      1.00      0.80         2
+       TWO BARRED FLASHER       1.00      1.00      1.00         3
+                   ULYSES       1.00      1.00      1.00         3
+                  VICEROY       1.00      1.00      1.00         5
+  WHITE LINED SPHINX MOTH       1.00      1.00      1.00         2
+               WOOD SATYR       0.83      1.00      0.91         5
+      YELLOW SWALLOW TAIL       1.00      1.00      1.00         3
+          ZEBRA LONG WING       1.00      1.00      1.00         4
+
+                 accuracy                           0.96       300
+                macro avg       0.95      0.96      0.95       300
+             weighted avg       0.96      0.96      0.96       300
